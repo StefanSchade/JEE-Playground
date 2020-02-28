@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+
+    <h:form>
+
+        First Name: <h:inputText value="#{student.firstName}" />
+
+        <br></br>
+
+        First Name: <h:inputText value="#{student.lastName}" />
+
+        <br></br>
+
+        Country
+        <h:selectOneMenu value="#{student.country}">
+            <f:selectItems value="#{student.countryOptions}"/>
+        </h:selectOneMenu>
+
+        <br></br>
+
+        <h:selectManyCheckbox value="#{student.favoriteLanguages}">
+            <f:selectItems value="#{student.languageOptions}"/>
+        </h:selectManyCheckbox>
+
+
+        <br></br>
+
+        <h:commandButton value="Submit" action="student-response"/>
+
+    </h:form>
+
+</h:body>
+
+<f:view>
+    <h:outputLabel value="Hello, world"/>
+</f:view>
+</html>
